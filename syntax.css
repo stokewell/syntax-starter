@@ -1,0 +1,121 @@
+/* Syntax Starter foundation — stable, project-agnostic defaults */
+
+:root {
+  color-scheme: light;
+  --font-heading: 'EB Garamond', Georgia, serif;
+  --font-body: 'Plus Jakarta Sans', system-ui, sans-serif;
+  --font-mono: ui-monospace, SFMono-Regular, Menlo, monospace;
+  --space-1: 0.5rem;
+  --space-2: 1rem;
+  --space-3: 1.5rem;
+  --space-4: 2rem;
+  --space-5: 3rem;
+  --space-6: 4rem;
+  --radius-sm: 0.5rem;
+  --radius-md: 0.85rem;
+  --radius-lg: 1.25rem;
+  --transition-fast: 160ms ease;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 5rem;
+}
+
+body,
+h1,
+h2,
+h3,
+p,
+blockquote,
+figure {
+  margin: 0;
+}
+
+body {
+  min-height: 100vh;
+  font-family: var(--font-body);
+  line-height: 1.65;
+  text-rendering: optimizeLegibility;
+}
+
+img,
+picture,
+svg {
+  display: block;
+  max-width: 100%;
+}
+
+button,
+input,
+textarea,
+select {
+  font: inherit;
+}
+
+a {
+  color: inherit;
+}
+
+h1,
+h2,
+h3 {
+  font-family: var(--font-heading);
+  line-height: 0.98;
+  text-wrap: balance;
+}
+
+p,
+li,
+blockquote {
+  max-width: 68ch;
+}
+
+code,
+pre {
+  font-family: var(--font-mono);
+}
+
+:focus-visible {
+  outline: 3px solid currentColor;
+  outline-offset: 4px;
+}
+
+.skip-to-content {
+  position: fixed;
+  z-index: 100;
+  top: 1rem;
+  left: 1rem;
+  padding: 0.7rem 1rem;
+  transform: translateY(-180%);
+  border-radius: var(--radius-sm);
+  background: #111;
+  color: #fff;
+  text-decoration: none;
+  transition: transform var(--transition-fast);
+}
+
+.skip-to-content:focus {
+  transform: translateY(0);
+}
+
+button {
+  border: 0;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    scroll-behavior: auto !important;
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
