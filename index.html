@@ -1,0 +1,166 @@
+<!doctype html>
+<html lang="en" data-theme-preference="system">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Your Project — A clear starting point</title>
+    <meta
+      name="description"
+      content="A polished blank-slate website built with Syntax Starter."
+    />
+    <meta name="theme-color" content="#067474" />
+
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Your Project" />
+    <meta
+      property="og:description"
+      content="A polished blank-slate website built with Syntax Starter."
+    />
+    <meta name="twitter:card" content="summary_large_image" />
+
+    <link rel="manifest" href="./site.webmanifest" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,600;0,700;1,400&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap"
+    />
+    <script>
+      (() => {
+        try {
+          const preference = localStorage.getItem('site-theme-preference') || 'system';
+          const resolved =
+            preference === 'system'
+              ? matchMedia('(prefers-color-scheme: dark)').matches
+                ? 'dark'
+                : 'light'
+              : preference;
+          document.documentElement.dataset.themePreference = preference;
+          document.documentElement.dataset.theme = resolved;
+        } catch {
+          document.documentElement.dataset.theme = 'light';
+        }
+      })();
+    </script>
+    <link rel="stylesheet" href="./syntax.css" />
+    <link rel="stylesheet" href="./site.css" />
+    <script src="./site.js" defer></script>
+  </head>
+  <body id="top">
+    <a class="skip-to-content" href="#main-content">Skip to content</a>
+
+    <header class="site-header">
+      <div class="shell site-header__inner">
+        <a class="site-name" href="#top">Your Project</a>
+        <nav class="site-nav" aria-label="Primary navigation">
+          <a href="#about">About</a>
+          <a href="#examples">Examples</a>
+          <button
+            class="theme-toggle"
+            id="theme-toggle"
+            type="button"
+            aria-label="Theme preference: system"
+          >
+            <span aria-hidden="true">◐</span>
+          </button>
+        </nav>
+      </div>
+    </header>
+
+    <main id="main-content" tabindex="-1">
+      <section class="hero" aria-labelledby="page-title">
+        <div class="shell hero__grid">
+          <div>
+            <p class="eyebrow">A polished blank slate</p>
+            <h1 id="page-title">Start with clarity, then make it unmistakably yours.</h1>
+            <p class="hero__deck">
+              Replace this introduction with the clearest version of what your project is, who it is
+              for, and why it matters.
+            </p>
+            <div class="hero__actions">
+              <a class="button" href="#about">Begin here</a>
+              <a class="text-link" href="./START_HERE.md">Read the setup guide</a>
+            </div>
+          </div>
+          <aside class="hero__note" aria-label="Starter principle">
+            <p class="hero__note-label">Starter principle</p>
+            <p><strong>Keep the foundation dependable.</strong></p>
+            <p>Let the content and project-owned CSS create the identity.</p>
+          </aside>
+        </div>
+      </section>
+
+      <section class="section" id="about" aria-labelledby="about-title">
+        <div class="shell editorial-grid">
+          <div class="section-heading">
+            <p class="eyebrow">One strong idea</p>
+            <h2 id="about-title">A section for the thing people should understand first.</h2>
+          </div>
+          <div class="prose">
+            <p class="lead">
+              This starter gives you enough structure to make a confident first page without forcing
+              the project into a generic startup layout.
+            </p>
+            <p>
+              Use this space for a concise explanation, an opening argument, a project mission, or the
+              beginning of a long-form article. The measure is deliberately readable and the hierarchy
+              is designed to survive real content.
+            </p>
+            <blockquote>
+              A starter should remove uncertainty without removing authorship.
+            </blockquote>
+          </div>
+        </div>
+      </section>
+
+      <section class="section section--tinted" id="examples" aria-labelledby="examples-title">
+        <div class="shell">
+          <div class="section-heading section-heading--wide">
+            <p class="eyebrow">Flexible by design</p>
+            <h2 id="examples-title">A few useful shapes, not a catalog of components.</h2>
+            <p>
+              Keep these cards, rewrite them, or remove the whole section. They demonstrate a clean
+              responsive grid without dictating the final product.
+            </p>
+          </div>
+
+          <div class="card-grid">
+            <article class="card">
+              <p class="card__number">01</p>
+              <h3>Editorial</h3>
+              <p>Articles, field guides, essays, reference pages, and focused content sites.</p>
+            </article>
+            <article class="card">
+              <p class="card__number">02</p>
+              <h3>Portfolio</h3>
+              <p>Selected work, project notes, case studies, and an opinionated personal presence.</p>
+            </article>
+            <article class="card">
+              <p class="card__number">03</p>
+              <h3>Small product</h3>
+              <p>A clear landing page for a tool, experiment, service, or early-stage idea.</p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="closing" aria-labelledby="closing-title">
+        <div class="shell closing__inner">
+          <p class="eyebrow">Your turn</p>
+          <h2 id="closing-title">Delete the placeholder. Keep the confidence.</h2>
+          <p>
+            Open <code>index.html</code>, rewrite the page, then use <code>site.css</code> to make the
+            visual direction belong to the project.
+          </p>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="shell site-footer__inner">
+        <p>Built from Syntax Starter.</p>
+        <a href="#top">Back to top</a>
+      </div>
+    </footer>
+  </body>
+</html>
