@@ -1,0 +1,324 @@
+/* Project layer — customize this file first. */
+
+:root {
+  --project-accent: #067474;
+  --project-accent-deep: #045858;
+  --project-paper: #fbfaf8;
+  --project-paper-deep: #f1ece6;
+  --project-ink: #24211f;
+  --project-muted: #6b625b;
+  --project-rule: rgba(36, 33, 31, 0.16);
+  --project-shadow: rgba(36, 33, 31, 0.12);
+}
+
+[data-theme='dark'] {
+  color-scheme: dark;
+  --project-accent: #7bc4be;
+  --project-accent-deep: #9bd8d2;
+  --project-paper: #171817;
+  --project-paper-deep: #222321;
+  --project-ink: #f2eee8;
+  --project-muted: #bcb4aa;
+  --project-rule: rgba(255, 255, 255, 0.15);
+  --project-shadow: rgba(0, 0, 0, 0.35);
+}
+
+body {
+  background: var(--project-paper);
+  color: var(--project-ink);
+  transition:
+    background-color var(--transition-fast),
+    color var(--transition-fast);
+}
+
+.shell {
+  width: min(92vw, 78rem);
+  margin-inline: auto;
+}
+
+.site-header {
+  position: sticky;
+  z-index: 20;
+  top: 0;
+  border-bottom: 1px solid var(--project-rule);
+  background: color-mix(in srgb, var(--project-paper) 90%, transparent);
+  backdrop-filter: blur(14px);
+}
+
+.site-header__inner,
+.site-footer__inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 2rem;
+}
+
+.site-header__inner {
+  min-height: 4.5rem;
+}
+
+.site-name {
+  font-family: var(--font-heading);
+  font-size: 1.35rem;
+  font-weight: 700;
+  text-decoration: none;
+}
+
+.site-nav {
+  display: flex;
+  align-items: center;
+  gap: 1.25rem;
+}
+
+.site-nav a {
+  color: var(--project-muted);
+  font-size: 0.82rem;
+  font-weight: 700;
+  text-decoration: none;
+}
+
+.site-nav a:hover,
+.site-nav a:focus-visible {
+  color: var(--project-accent);
+}
+
+.theme-toggle {
+  display: grid;
+  width: 2.5rem;
+  height: 2.5rem;
+  place-items: center;
+  border: 1px solid var(--project-rule);
+  border-radius: 999px;
+  background: transparent;
+  color: var(--project-ink);
+  cursor: pointer;
+}
+
+.hero {
+  padding: clamp(5rem, 11vw, 10rem) 0;
+  border-bottom: 1px solid var(--project-rule);
+}
+
+.hero__grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1.5fr) minmax(17rem, 0.62fr);
+  gap: clamp(3rem, 8vw, 8rem);
+  align-items: end;
+}
+
+.eyebrow,
+.hero__note-label,
+.card__number {
+  color: var(--project-accent);
+  font-size: 0.73rem;
+  font-weight: 700;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+}
+
+.hero h1 {
+  max-width: 11ch;
+  margin: 0.8rem 0 1.5rem;
+  font-size: clamp(3.7rem, 8.5vw, 7.8rem);
+  font-weight: 600;
+  letter-spacing: -0.058em;
+}
+
+.hero__deck {
+  color: var(--project-muted);
+  font-size: clamp(1.12rem, 2vw, 1.4rem);
+  line-height: 1.7;
+}
+
+.hero__actions {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 1rem 1.4rem;
+  margin-top: 2rem;
+}
+
+.button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 3rem;
+  padding: 0.8rem 1.2rem;
+  border-radius: var(--radius-sm);
+  background: var(--project-accent);
+  color: #fff;
+  font-weight: 700;
+  text-decoration: none;
+}
+
+.button:hover {
+  background: var(--project-accent-deep);
+}
+
+.text-link {
+  color: var(--project-accent);
+  font-weight: 700;
+  text-underline-offset: 0.25em;
+}
+
+.hero__note {
+  padding: 1.8rem;
+  border: 1px solid var(--project-rule);
+  background: var(--project-paper-deep);
+  box-shadow: 1rem 1rem 0 color-mix(in srgb, var(--project-accent) 15%, transparent);
+}
+
+.hero__note p + p {
+  margin-top: 0.55rem;
+}
+
+.section {
+  padding: clamp(5rem, 9vw, 8rem) 0;
+}
+
+.section--tinted {
+  border-block: 1px solid var(--project-rule);
+  background: var(--project-paper-deep);
+}
+
+.editorial-grid {
+  display: grid;
+  grid-template-columns: minmax(15rem, 0.75fr) minmax(0, 1.25fr);
+  gap: clamp(3rem, 8vw, 8rem);
+}
+
+.section-heading h2,
+.closing h2 {
+  margin-top: 0.65rem;
+  font-size: clamp(2.8rem, 5.5vw, 5.2rem);
+  font-weight: 600;
+  letter-spacing: -0.04em;
+}
+
+.section-heading--wide {
+  max-width: 54rem;
+  margin-bottom: 2.5rem;
+}
+
+.section-heading--wide p:last-child {
+  margin-top: 1rem;
+  color: var(--project-muted);
+  font-size: 1.08rem;
+}
+
+.prose {
+  max-width: 44rem;
+}
+
+.prose > * + * {
+  margin-top: 1.35rem;
+}
+
+.lead {
+  font-family: var(--font-heading);
+  font-size: clamp(1.5rem, 2.8vw, 2rem);
+  line-height: 1.45;
+}
+
+blockquote {
+  padding-left: 1.4rem;
+  border-left: 0.3rem solid var(--project-accent);
+  font-family: var(--font-heading);
+  font-size: clamp(1.45rem, 2.6vw, 2rem);
+  font-style: italic;
+  line-height: 1.35;
+}
+
+.card-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1rem;
+}
+
+.card {
+  min-height: 16rem;
+  padding: 1.5rem;
+  border: 1px solid var(--project-rule);
+  background: var(--project-paper);
+  box-shadow: 0 1rem 2rem var(--project-shadow);
+}
+
+.card h3 {
+  margin: 2.5rem 0 0.75rem;
+  font-size: 2rem;
+  font-weight: 600;
+  letter-spacing: -0.02em;
+}
+
+.card p:last-child {
+  color: var(--project-muted);
+}
+
+.closing {
+  padding: clamp(6rem, 12vw, 11rem) 0;
+}
+
+.closing__inner {
+  max-width: 58rem;
+}
+
+.closing p:last-child {
+  margin-top: 1.4rem;
+  color: var(--project-muted);
+  font-size: 1.1rem;
+}
+
+code {
+  padding: 0.12rem 0.35rem;
+  border-radius: 0.2rem;
+  background: color-mix(in srgb, var(--project-accent) 13%, transparent);
+}
+
+.site-footer {
+  padding: 2.5rem 0;
+  border-top: 1px solid var(--project-rule);
+  color: var(--project-muted);
+}
+
+.site-footer a {
+  color: inherit;
+  text-underline-offset: 0.2em;
+}
+
+@media (max-width: 58rem) {
+  .hero__grid,
+  .editorial-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .card-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .card {
+    min-height: 0;
+  }
+}
+
+@media (max-width: 42rem) {
+  .site-header__inner,
+  .site-footer__inner {
+    align-items: flex-start;
+    flex-direction: column;
+    padding-block: 1rem;
+  }
+
+  .site-nav {
+    width: 100%;
+    flex-wrap: wrap;
+  }
+
+  .theme-toggle {
+    margin-left: auto;
+  }
+
+  .hero__actions > * {
+    width: 100%;
+    text-align: center;
+  }
+}
