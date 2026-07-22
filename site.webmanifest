@@ -1,0 +1,10 @@
+{
+  "name": "Your Project",
+  "short_name": "Project",
+  "description": "A polished blank-slate website built with Syntax Starter.",
+  "start_url": "./",
+  "display": "standalone",
+  "background_color": "#fbfaf8",
+  "theme_color": "#067474",
+  "icons": []
+}
